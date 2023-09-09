@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'config/theme/app_theme.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,13 +10,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
+      title: 'KICHWA WEB APP',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedColor: 0).getTheme(),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: const Text('KICHWA LEARNING APP'),
         ),
         body: const Center(
-          child: Text('me llamo Jhojan'),
+          child: Text('KICHWA WEB APP'),
         ),
       ),
     );
