@@ -1,5 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:kichwa_web_app/config/router/admin_handlers.dart';
+import 'package:kichwa_web_app/config/router/no_page_found_handler.dart';
+
 
 class Flurorouter {
   static final FluroRouter router = FluroRouter();
@@ -18,6 +20,9 @@ class Flurorouter {
     router.define(rootRoute,     handler: AdminHandlers.login);
     router.define(loginRoute,    handler: AdminHandlers.login);
    // router.define(registerRoute, handler: handler);
+
+  //404 PAGINA NO ENCONTRADA
+   router.notFoundHandler = NoPageFoundHandlers.noPageFound;
   }
-  //
+
 }
