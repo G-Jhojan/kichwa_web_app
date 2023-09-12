@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'config/theme/app_theme.dart';
+import 'presentation/screens/home/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,9 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('KICHWA LEARNING APP'),
         ),
-        body: const Center(
-          child: Text('KICHWA WEB APP'),
-        ),
+        body: const HomeScreen()
       ),
     );
   }
