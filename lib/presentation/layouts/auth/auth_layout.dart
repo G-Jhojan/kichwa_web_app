@@ -4,15 +4,19 @@ import 'widgets/custom_background.dart';
 import 'widgets/custom_title.dart';
 
 class AuthLayout extends StatelessWidget {
-  const AuthLayout({super.key});
+
+
+  final Widget child;
+  const AuthLayout({Key? key, required this.child});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
      body: ListView(
-        children: const [
-          _DesktopBody(),
-           Text('AuthLayout'),
+        children:  [
+          _DesktopBody(child: child,),
+           const Text('AuthLayout'),
         ],
       )
     );
@@ -20,7 +24,14 @@ class AuthLayout extends StatelessWidget {
 }
 
 class _DesktopBody extends StatelessWidget {
-  const _DesktopBody({Key? key}) : super(key: key);
+
+  final Widget child;
+
+  const _DesktopBody({super.key, required this.child});
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +50,13 @@ class _DesktopBody extends StatelessWidget {
             width: 500,
             height: double.infinity,
             color: Colors.black,
-            child: const
+            child:
             Column(
               children: [
-                CustomTitle(),
-                SizedBox(height: 50),
-                Expanded(child: )
+                const SizedBox(height: 30),
+                const CustomTitle(),
+                const SizedBox(height: 50),
+               Expanded(child:child )
               ],
             ),
           ),

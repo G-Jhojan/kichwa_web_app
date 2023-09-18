@@ -20,7 +20,8 @@ class CustomTitle extends StatelessWidget {
           const SizedBox(height: 20),
 
           FittedBox(
-            child: Text('ALLI SHAMUSHKA / BIENVENIDO',
+            fit: BoxFit.contain,
+            child: Text('ALLI SHAMUSHKA',
             style: GoogleFonts.montserratAlternates(
               fontSize: 60,
               color: Colors.white,
