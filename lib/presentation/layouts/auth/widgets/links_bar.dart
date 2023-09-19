@@ -9,24 +9,27 @@ class LinksBar extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return  Container(
-      height: size.height * 0.05,
+      height: size.height * 0.09,
        color: Colors.black,
-      child: const Wrap(
+      child:  Wrap(
+        alignment: WrapAlignment.center,
         children: [
-          LinkText(text: 'About'),
-          LinkText(text: 'Help Center'),
-          LinkText(text: 'Privacy Policy'),
-          LinkText(text: 'Cookie Policy'),
-          LinkText(text: 'Blog'),
-          LinkText(text: 'Status'),
-          LinkText(text: 'Carrers'),
-          LinkText(text: 'Brands'),
-          LinkText(text: 'Advertiding'),
-          LinkText(text: 'Services'),
-          LinkText(text: 'About'),
-          LinkText(text: 'About'),
-          LinkText(text: 'About'),
-          LinkText(text: 'About'),
+          LinkText(text: 'About', onPressed: ()=> print('about'),),
+          const LinkText(text: 'Help Center'),
+          const LinkText(text: 'Help Center'),
+          const LinkText(text: 'Help Center'),
+          const LinkText(text: 'Privacy Policy'),
+          const LinkText(text: 'Cookie Policy'),
+          const LinkText(text: 'Blog'),
+          const LinkText(text: 'Status'),
+          const LinkText(text: 'Carrers'),
+          const LinkText(text: 'Brands'),
+          const LinkText(text: 'Advertiding'),
+          const LinkText(text: 'Services'),
+          const LinkText(text: 'About'),
+          const LinkText(text: 'About'),
+          const LinkText(text: 'About'),
+          const LinkText(text: 'About'),
         ],
       )
     );
