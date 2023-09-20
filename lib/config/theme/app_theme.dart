@@ -24,8 +24,13 @@ class AppTheme {
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
     colorSchemeSeed: colorList[selectedColor],
+    scrollbarTheme: ScrollbarThemeData(
+      thumbColor: MaterialStateProperty.all(Colors.grey[700]),
+      trackColor: MaterialStateProperty.all(Colors.grey.withOpacity(0.2)),
+    ),
     appBarTheme: const AppBarTheme(
-      centerTitle: true
+      centerTitle: true,
+
     )
   );
 
