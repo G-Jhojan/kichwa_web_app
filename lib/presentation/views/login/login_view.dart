@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kichwa_web_app/config/router/router.dart';
+import 'package:kichwa_web_app/config/ui/buttons/custom_outlined_button.dart';
 import 'package:kichwa_web_app/config/ui/buttons/link_text.dart';
 
 class LoginView extends StatelessWidget {
@@ -29,6 +31,7 @@ class LoginView extends StatelessWidget {
                 const SizedBox(height: 20,),
                  //PASSWORD
                 TextFormField(
+
                   obscureText: true,
                   style: const TextStyle(color: Colors.white),
                   decoration: buildInputDecoration(
@@ -38,9 +41,23 @@ class LoginView extends StatelessWidget {
                    )
                   ),
 
-                  const SizedBox(height: 40,),
+                  const SizedBox(height: 30,),
+                  CustomOutlinedButton(
+                  onPressed: (){},
+                  text: 'INGRESAR',
+                  //color: Colors.red,
+                  //isFilled: true,
+                  ),
+                  const SizedBox(height: 10,),
 
-                  LinkText(text: 'Nueva Cuenta')
+
+                  LinkText(text: 'Nueva Cuenta',
+                    onPressed: (){
+                      Navigator.pushNamed(context, Flurorouter.registerRoute);
+                    },)
+
+
+
 
               ],
             )
@@ -56,9 +73,10 @@ class LoginView extends StatelessWidget {
     required IconData icon,
   }) {
     return  InputDecoration(
+
                   enabled: true,
                   focusedBorder:  const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: BorderSide(color: Colors.orange),
                   ),
                   border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),

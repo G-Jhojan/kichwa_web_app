@@ -11,14 +11,15 @@ class Flurorouter {
 
   //auth router
   static String loginRoute = 'auth/login';
-  static String registerRoute = 'auth/login';
+  static String registerRoute = 'auth/register';
 
   //DashBorad
   static String dashboardRoute = 'auth/login';
 
   static void configureRoutes() {
-    router.define(rootRoute,     handler: AdminHandlers.login);
-    router.define(loginRoute,    handler: AdminHandlers.login);
+    router.define(rootRoute,     handler: AdminHandlers.login, transitionType: TransitionType.none);
+    router.define(loginRoute,    handler: AdminHandlers.login, transitionType: TransitionType.none);
+    router.define(registerRoute,    handler: AdminHandlers.register, transitionType: TransitionType.none);
    // router.define(registerRoute, handler: handler);
 
   //404 PAGINA NO ENCONTRADA

@@ -9,7 +9,7 @@ class CustomTitle extends StatelessWidget {
     return  Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
             'img/logo_login.png',
