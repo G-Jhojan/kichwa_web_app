@@ -60,7 +60,7 @@ class RegisterView extends StatelessWidget {
                 obscureText: true,
                 style: const TextStyle(color: Colors.white),
                 decoration: CustomInputsDecoration().authInputDecoration(
-                  hint: '*********',
+                  hint: 'Mínimo 6 caracteres',
                   label: 'Contraseña',
                   icon: Icons.lock_outline,
                 )),
@@ -89,6 +89,4 @@ class RegisterView extends StatelessWidget {
       )),
     );
   }
-
-
 }
