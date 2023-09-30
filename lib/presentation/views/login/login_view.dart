@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:kichwa_web_app/config/providers/login_form_provider.dart';
 import 'package:kichwa_web_app/config/router/router.dart';
@@ -25,11 +26,17 @@ class LoginView extends StatelessWidget {
                 child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 370),
               child: Form(
+                  autovalidateMode: AutovalidateMode.always,
                   key: loginFormProvider.formKey,
                   child: Column(
                 children: [
                   //email
                   TextFormField(
+                      validator: (value) {
+                        if(!EmailValidator.validate(value ?? '')) return 'Correo no válido';
+                        return null;
+                      },
+                      onChanged: (value) => loginFormProvider.email = value,
                       style: const TextStyle(color: Colors.white),
                       decoration: CustomInputsDecoration().authInputDecoration(
                         hint: 'Ingrese su correo Electrónico',
@@ -43,6 +50,7 @@ class LoginView extends StatelessWidget {
 
                   //PASSWORD
                   TextFormField(
+                      onChanged: (value) => loginFormProvider.password = value,
                       validator: (value) {
                         if (value == null || value.isEmpty)
                           return 'Ingrese su Contaseña';

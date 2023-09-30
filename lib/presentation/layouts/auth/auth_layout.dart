@@ -54,14 +54,14 @@ class _MobileBody extends StatelessWidget {
           const CustomTitle(),
           Container(
             width: double.infinity,
-            height: 550,
+            height: 700, //tamaño del formulario de registro
             color: Colors.black,
             child: child,
             ),
 
           const SizedBox(
             width: double.infinity,
-            height: 400,
+            height: 200,
             child:  CustomBackground(),
 
           )
@@ -92,14 +92,14 @@ class _DesktopBody extends StatelessWidget {
           const CustomBackground(),
           //view container
           Container(
-            width: 500,
+            width: 400,
             height: double.infinity,
             color: Colors.black,
             child: Column(
               children: [
                 const SizedBox(height: 30),
                 const CustomTitle(),
-                const SizedBox(height: 50),
+               // const SizedBox(height: 50),
                 Expanded(child: child)
               ],
             ),
